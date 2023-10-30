@@ -1,25 +1,29 @@
 import '../styles/style.css'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-import { inventory }from './array.js'
+import { inventory } from './array.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello World!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+const DOMSelectors ={
+  app: document.querySelector('#app'),
+  item_name: document.querySelector(inventory.item),
+  price: document.querySelector(inventory.price),
+};
+console.log(DOMSelectors.name);
+function createcard(){
+  console.log(item_name, price);
+  return `<div class="box">
+      <div class="item">
+        <div class="item_link">
+          <div class="item_bg"></div>
+  
+          <div class="item_title">
+            <p class="name_title">${DOMSelectors.item_name} </p>
+          </div>
+            <span class="item_date"> $${DOMSelectors.price}
+            </span>
+        </div>
+      </div>
+    </div>`
+  
+}
+DOMSelectors.app.insertAdjacentHTML(
+      "afterbegin", createcard()
+  )    
