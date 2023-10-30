@@ -1,4 +1,4 @@
-const inventory = [
+export const inventory = [
     {
         item: "Computer",
         quantity: 1,
@@ -50,6 +50,20 @@ const inventory = [
     },
     {
         item: "Binder",
+        quantity: 1,
+        price: 5,
+        in_stock: true,
+        type: ["school"],
+    },
+    {
+        item: "Calculator",
+        quantity: 1,
+        price: 100,
+        in_stock: false,
+        type: ["school", "electronics"],
+    },
+    {
+        item: "Notebook",
         quantity: 1,
         price: 5,
         in_stock: true,
