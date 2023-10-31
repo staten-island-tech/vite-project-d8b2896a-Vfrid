@@ -1,27 +1,25 @@
-import '../styles/style.css'
 import { inventory } from './array.js'
 
 const DOMSelectors ={
   app: document.querySelector('#app'),
-  item_name: document.querySelector(inventory.item),
-  price: document.querySelector(inventory.price),
 };
-console.log(DOMSelectors.name);
+console.log(inventory)
 function createcard(){
-  console.log(item_name, price);
-  return `<div class="box">
+  return inventory.forEach((invent)=> DOMSelectors.app.insertAdjacentHTML(
+    "afterbegin", 
+  `<div class="box">
       <div class="item">
         <div class="item_link">
           <div class="item_bg"></div>
   
           <div class="item_title">
-            <p class="name_title">${DOMSelectors.item_name} </p>
+            <p class="name_title">${invent.item} </p>
           </div>
-            <span class="item_date"> $${DOMSelectors.price}
+            <span class="item_date"> $${invent.price}
             </span>
         </div>
       </div>
-    </div>`
+    </div>`) )
   
 }
 DOMSelectors.app.insertAdjacentHTML(

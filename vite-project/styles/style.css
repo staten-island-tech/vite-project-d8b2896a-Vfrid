@@ -103,39 +103,8 @@ h1 {
 width: 1142px;
 margin: 0 auto;
 }
-.form_label{
-font-size: 20px;
-color: #121212;
-font-weight:700;
-}
 
-.input_field{
-background-color: #121212;
-color:#fff;
-font-weight: 700;
-font-size: 20px;
-border-radius: 8px;
-box-shadow: none;
-}
 
-.btn{
-background-color:#121212;
-color:#fff;
-font-weight:700;
-font-size: 20px;
-border-radius: 8px;
-box-shadow: none;
-}
-.delete_btn{
-background-color:#fff;
-color:#121212;
-font-weight:700;
-font-size: 20px;
-border-radius: 8px;
-box-shadow: none;
-z-index: 2;
-
-}
 body {
 background-color: rgb(187, 185, 173);
 }
