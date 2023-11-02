@@ -6,20 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VFrid App</title>
   </head>
-  <body>
-    <!-- <nav>
-      <menu>
-        <menuitem id="demo1"><a>Menu</a>
-      </menuitem>
-        <menuitem><a>Random Dog</a>
-      </menuitem>
-        <menuitem><a>Dog by Breed</a>
-      </menuitem>
-      </menu>
-    </nav> -->
+  <body class="light">
+    <button class="light_button">Light Mode</button>
+    <button class="dark_button">Dark Mode</button>
     <form action="" type="submit" id="checkbox_form">    
-      <label for="checkbox" class="label">Checkbox</label>
-      <input type="checkbox" name="checkbox" id="checkbox" class="checker"></input>
+      <label for="cheap_checkbox" class="label"> Under $100 </label>
+      <input type="checkbox" name="cheap_checkbox" id="cheap_checkbox" class="checker"></input>
+      <label for="stock_checkbox" class="label"> In Stock </label>
+      <input type="checkbox" name="stock_checkbox" id="stock_checkbox" class="checker"></input>
     </form>
     <div id="app"></div>
     <script type="module" src="./js/main.js"></script>

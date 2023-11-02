@@ -52,7 +52,7 @@ export const inventory = [
         item: "Binder",
         quantity: 1,
         price: 5,
-        in_stock: true,
+        in_stock: false,
         type: ["school"],
     },
     {
