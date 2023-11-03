@@ -5,8 +5,8 @@ export const DOMSelectors ={
   checkbox_form: document.querySelector('#checkbox_form'),
   cheap_checkbox: document.querySelector('#cheap_checkbox'),
   stock_checkbox: document.querySelector('#stock_checkbox'),
-  light: document.querySelector('.light_button'),
-  dark: document.querySelector('.dark_button'),
+  light_button: document.querySelector('.light_button'),
+  dark_button: document.querySelector('.dark_button'),
 };
 export const cheap = inventory.filter((invent)=>invent.price<100);
 export const stock = inventory.filter((invent)=>invent.in_stock === true);
@@ -110,5 +110,34 @@ DOMSelectors.checkbox_form.addEventListener("click", function (event) {
   else{
     clearcards();
     createcard();
+  }
+});
+
+
+const light_button = document.querySelector('.light_button');
+const dark_button = document.querySelector('.dark_button')
+
+light_button.addEventListener("click", function () {
+    if (document.body.classList.contains("dark")) {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+      console.log('dark off light on')
+    } else {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+      console.log('light on')
+    }
+  });
+
+
+dark_button.addEventListener("click", function () {
+  if (document.body.classList.contains("light")) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+    console.log('light off dark on')
+  } else {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+    console.log('dark on')
   }
 });

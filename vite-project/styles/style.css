@@ -1,20 +1,29 @@
 .light {
-  --primary: var(#242424);
-  --secondary: var(black);
-  --card_color: var(black);
+  --primary: #f8efcf;
+  --secondary: rgb(41, 41, 41);
+  --card_color: rgb(41, 41, 41);
+  --text_color: #f8efcf;
+  --label_color: rgb(41, 41, 41);
 }
 .dark {
-  --primary: var(black);
-  --secondary: var(rgb(233, 229, 212));
-  --card_color: var(rgb(233,299,212));
+  --primary: rgb(41, 41, 41);
+  --secondary: #f8efcf;
+  --card_color: #f8efcf;
+  --text_color: rgb(41, 41, 41);
+  --label_color: #f8efcf;
 }
 .light_button{
-  background-color: #646cff;
+  background-color: #b0b3e9;
   color:rgb(233, 229, 212);
+  height: 35px;
 }
 .dark_button{
-  background-color: #b63636;
+  background-color: #753636;
   color:rgb(233, 229, 212);
+  height: 35px;
+}
+.label{
+  color: var(--label_color)
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,6 +39,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -53,9 +63,10 @@ h1 {
 }
 
 #app {
-  margin: 0 auto;
   padding: 2rem;
   text-align: left;
+  width: 1142px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -121,7 +132,7 @@ margin: 0 auto;
 
 
 body {
-background-color: rgb(187, 185, 173);
+background-color: var(--primary);
 }
 .box {
 display: -webkit-box;
@@ -149,17 +160,18 @@ width: 1000px;
 .item_link {
 display: block;
 padding: 30px 20px;
-background-color: #121212;
-
+background-color: var(--card_color);
+z-index: 2;
 overflow: hidden;
 
 position: relative;
 }
-.item_link:hover,
+/* .item_link:hover,
 .item_link:hover .item_date {
 text-decoration: none;
-color: #FFF;
-}
+color: rgb(41, 41, 41);
+} */
+
 
 .item_link:hover .item_bg {
 -webkit-transform: scale(10);
@@ -179,28 +191,29 @@ position: relative;
 .name_title {
 font-weight: bold;
 font-size: 30px;
-color: #FFF;
+color: var(--text_color);
 }
 .name_label {
 font-size: 15px;
 font-weight:300;
-color: #fff;
+color: var(--text_color);
 }
 .item_date_box {
 font-size: 18px;
-color: #FFF;
+color: var(--text_color);
 
-z-index: 2;
 position: relative;
 }
 .item_date {
+position: absolute;
 font-weight: bold;
-color: #f9b234;
-
+color: var(--text_color);
 -webkit-transition: color .5s ease;
 -o-transition: color .5s ease;
-transition: color .5s ease
+transition: color .5s ease;
+z-index: 3;
 }
+
 .item_bg {
 height: 128px;
 width: 128px;
