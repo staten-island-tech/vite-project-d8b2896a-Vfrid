@@ -113,11 +113,7 @@ DOMSelectors.checkbox_form.addEventListener("click", function (event) {
   }
 });
 
-
-const light_button = document.querySelector('.light_button');
-const dark_button = document.querySelector('.dark_button')
-
-light_button.addEventListener("click", function () {
+DOMSelectors.light_button.addEventListener("click", function () {
     if (document.body.classList.contains("dark")) {
       document.body.classList.add("light");
       document.body.classList.remove("dark");
@@ -130,7 +126,7 @@ light_button.addEventListener("click", function () {
   });
 
 
-dark_button.addEventListener("click", function () {
+DOMSelectors.dark_button.addEventListener("click", function () {
   if (document.body.classList.contains("light")) {
     document.body.classList.add("dark");
     document.body.classList.remove("light");

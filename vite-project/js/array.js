@@ -28,6 +28,13 @@ export const inventory = [
         type: ["electronic"],
     },
     {
+        item: "Earbuds",
+        quantity: 1,
+        price: 18,
+        in_stock: true,
+        type: ["electronic"],
+    },
+    {
         item: "Pencils",
         quantity: 10,
         price: 5,

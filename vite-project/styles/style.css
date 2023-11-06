@@ -16,14 +16,20 @@
   background-color: #b0b3e9;
   color:rgb(233, 229, 212);
   height: 35px;
+  margin: 10px;
 }
 .dark_button{
   background-color: #753636;
   color:rgb(233, 229, 212);
   height: 35px;
+  margin: 10px;
 }
 .label{
-  color: var(--label_color)
+  color: var(--label_color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 0;
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -51,7 +57,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -60,6 +66,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color:var(--secondary);
+  text-align: center;
 }
 
 #app {
@@ -67,27 +74,9 @@ h1 {
   text-align: left;
   width: 1142px;
   margin: 0 auto;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 button {
@@ -128,6 +117,8 @@ h1 {
 .container {
 width: 1142px;
 margin: 0 auto;
+/* display: flex; */
+justify-content: space-evenly;
 }
 
 
@@ -136,26 +127,26 @@ background-color: var(--primary);
 }
 .box {
 display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
+/* display: -ms-flexbox; */
+/* display: flex; */
 -webkit-box-align: start;
--ms-flex-align: start;
+/* -ms-flex-align: start; */
 /* align-items: flex-start; */
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-justify-content: space-between;
+/* -ms-flex-wrap: wrap; */
+/* flex-wrap: wrap; */
+/* justify-content: space-between; */
 padding: 50px 0;
 }
 .item {
--ms-flex-preferred-size: calc(33.33333% - 30px);
-flex-basis: calc(33.33333% - 30px);
+/* -ms-flex-preferred-size: calc(33.33333% - 30px);
+flex-basis: calc(33.33333% - 30px); */
 
 margin: 0 15px 30px;
 
 overflow: hidden;
 
 border-radius: 28px;
-width: 1000px;
+width:300px;
 }
 .item_link {
 display: block;
